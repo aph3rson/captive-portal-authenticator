@@ -1,0 +1,30 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="on_switch"
+        android:summary="@string/pref_description_functionality"
+        android:title="@string/pref_title_functionality" />
+
+    <!-- NOTE: EditTextPreference accepts EditText attributes. -->
+    <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
+    <EditTextPreference
+        android:capitalize="none"
+        android:hint="@string/pref_hint_network_username"
+        android:inputType="textVisiblePassword"
+        android:key="network_username"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_network_username" />
+
+    <EditTextPreference
+        android:capitalize="none"
+        android:inputType="textPassword"
+        android:key="network_password"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_network_password" />
+
+</PreferenceScreen>

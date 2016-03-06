@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="us.aph3rson.captiveportalauthenticator.MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:showIn="@layout/app_bar_main"
+    android:background="@color/_colorNeutral"
+    tools:context="us.aph3rson.captiveportalauthenticator.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/statusIcon"
+        android:layout_width="160sp"
+        android:layout_height="160sp"
+        android:background="@drawable/ic_help_24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:tint="@android:color/white"
+        />
 
     <TextView
+        android:id="@+id/statusText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/statusIcon"
+        android:layout_marginTop="10dp"
+        android:text="@string/status_loading"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        />
+
 </RelativeLayout>
